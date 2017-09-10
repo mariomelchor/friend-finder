@@ -1,0 +1,16 @@
+body {
+  background-color: #e6e6e6;
+}
+.site-header {
+  height: 300px;
+}
+.site-header {
+  padding-top: 40px;
+}
+.site-container {
+  margin-top: -200px;
+}
+.page-footer {
+  margin-top: -80px;
+  padding-top: 60px;
+}
