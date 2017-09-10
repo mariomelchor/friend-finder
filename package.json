@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mariomelchor/friend-finder/issues"
   },
-  "homepage": "https://github.com/mariomelchor/friend-finder#readme"
+  "homepage": "https://github.com/mariomelchor/friend-finder#readme",
+  "dependencies": {
+    "materialize-css": "^0.100.2"
+  }
 }
