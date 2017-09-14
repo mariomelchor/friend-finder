@@ -1,3 +1,4 @@
+var fs = require('fs');
 var friends = require('../app/data/friends.js');
 
 module.exports = function(app){
@@ -8,16 +9,20 @@ module.exports = function(app){
 
   // Take in Post request
   app.post('/api/friends', function (req, res) {
-    res.send('Got a POST request');
-    console.log(res.body);
-
+    // Get post request and add to friends array
     var newFriend = req.body;
-    // newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
-  
-    console.log(newFriend);
-    characters.push(newFriend);
-  
-    res.json(newFriend);
+    friends.push(newFriend);
+
+    // // Update freinds.js file with newFriend
+    // fs.writeFile('app/data/friends.js', JSON.stringify( friends, null, 2 ), function(error) {
+    //   // if there is an error, log the error
+    //   if (error) {
+    //     console.log(error);
+    //   }
+    // });
+
+    // Respond with newFriend
+    res.json(friends);
 
   })
 }
