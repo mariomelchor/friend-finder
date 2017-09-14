@@ -22,148 +22,149 @@
 		         <p>Answer each question with below with 1 being Strongly Disagree and 5 being Strongly Agree.</p>
 
 		         <div class="row">
-		           <form action="/api/friends" class="col s12" method="POST">
+		           <form id="form" action="/api/friends" class="col s12" method="POST">
 		             <div class="row">
 		               <div class="input-field col s6">
-                      <input id="name" type="text" class="validate">
+                      <input id="name" name="name" type="text" class="validate" value="">
                       <label for="name">Name</label>
 		               </div>
 		               <div class="input-field col s6">
-		                 <input id="photo" type="text" class="validate">
+		                 <input id="photo" name="photo" type="text" class="validate" value="">
 		                 <label for="photo">Photo</label>
 		               </div>
                  </div><!--/.row -->
                  <div class="row">
 
                   <div class="input-field col s6">
-                    <select>
+                    <select id="option_1" name="option_1">
                       <option value="" disabled selected>Choose your option</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
-                      <option value="2">4</option>
-                      <option value="3">5</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
                     </select>
                     <label>Do you like Sports?</label>
                   </div>
 
                   <div class="input-field col s6">
-                    <select>
+                    <select id="option_2" name="option_2">
                       <option value="" disabled selected>Choose your option</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
-                      <option value="2">4</option>
-                      <option value="3">5</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
                     </select>
                     <label>Do you like long walks on the Beach?</label>
                   </div>
 
                   <div class="input-field col s6">
-                      <select>
+                      <select id="option_3" name="option_3">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                        <option value="2">4</option>
-                        <option value="3">5</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                       </select>
                       <label>Do You like Mondays?</label>
                     </div>
 
                     <div class="input-field col s6">
-                      <select>
+                      <select id="option_4" name="option_4">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                        <option value="2">4</option>
-                        <option value="3">5</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                       </select>
                       <label>Do You like Peanut Butter?</label>
                     </div>
 
                     <div class="input-field col s6">
-                        <select>
+                      <select id="option_5" name="option_5">
                           <option value="" disabled selected>Choose your option</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
-                          <option value="2">4</option>
-                          <option value="3">5</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
                         </select>
                         <label>Do You like the TV Show Game of Thrones?</label>
                       </div>
 
                       <div class="input-field col s6">
-                        <select>
+                        <select id="option_6" name="option_6">
                           <option value="" disabled selected>Choose your option</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
-                          <option value="2">4</option>
-                          <option value="3">5</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
                         </select>
                         <label>Do You like Sunsets?</label>
                       </div>
 
                       <div class="input-field col s6">
-                          <select>
+                        <select id="option_7" name="option_7">
                             <option value="" disabled selected>Choose your option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="2">4</option>
-                            <option value="3">5</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                           </select>
                           <label>Do you like the Rain?</label>
                         </div>
 
                         <div class="input-field col s6">
-                          <select>
+                          <select id="option_8" name="option_8">
                             <option value="" disabled selected>Choose your option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="2">4</option>
-                            <option value="3">5</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                           </select>
                           <label>Do You like Summer?</label>
                         </div>
 
                         <div class="input-field col s6">
-                            <select>
+                          <select id="option_9" name="option_9">
                               <option value="" disabled selected>Choose your option</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
-                              <option value="2">4</option>
-                              <option value="3">5</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
                             </select>
                             <label>Materialize Select</label>
                           </div>
 
                           <div class="input-field col s6">
-                            <select>
+                            <select id="option_10" name="option_10">
                               <option value="" disabled selected>Choose your option</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
-                              <option value="2">4</option>
-                              <option value="3">5</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
                             </select>
                             <label>Materialize Select</label>
                           </div>
 
                   </div><!--/.row -->
+                  <div class="row">
+                    <p><button id="btn-submit" type="submit" class="waves-effect waves-light btn cyan lighten-1"><i class="material-icons right">arrow_forward</i> Submit Survey</button></p>
+                  </div><!--/.row -->
 		           </form>
-             </div><!-- /.row -->
+             </div><!-- /.row -->            
 
-             <p><a href="/survey" class="waves-effect waves-light btn cyan lighten-1"><i class="material-icons right">arrow_forward</i> Submit Survey</a></p>
-
-		       </div>
-		     </div>
-		   </div>
+		       </div><!-- /.card-content -->  
+		     </div><!-- /.card -->  
+		   </div><!-- /.col -->  
 		 </div><!-- /.row -->
   </div><!-- /.container -->
 
@@ -181,6 +182,37 @@
   <script>
       $(document).ready(function() {
         $('select').material_select();
+
+        // when the search button executed, run searchBandsInTown function, show most of the div and hide some div
+        $('#btn-submit').on("click", function(event) {
+          event.preventDefault();
+
+          // far for select fields
+          var val = [];
+
+          // gets all select field values and adds to array
+          $('select').each(function(){
+            var number = $(this).val();
+            val.push(parseInt(number));
+          });
+
+          console.log(val);
+         
+          var answers = {
+            name:  $('#name').val().trim(),
+            photo: $('#photo').val().trim(),
+            scores: val
+          }
+
+          console.log(answers);
+
+          // Post using AJAX
+          $.post('/api/friends', answers).done(function(data) {
+            console.log(data);
+
+          });
+
+        });
       });
     </script>
 </body>
