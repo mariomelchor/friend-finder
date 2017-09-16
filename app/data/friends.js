@@ -1,18 +1,98 @@
 var friends = [
   {
     name:"Joseph",
-    photo:"https://cdn.pixabay.com/photo/2015/12/09/22/26/people-1085695_960_720.png",
+    photo:"http://yourhomeiq.com/wp-content/uploads/2015/02/random-user-13.jpg",
+    scores:[
+      3,
+      2,
+      4,
+      3,
+      5,
+      3,
+      2,
+      1,
+      4,
+      2
+    ]
+  },
+  {
+    name:"Melissa",
+    photo:"http://www.simon-li.com/projects/mongkok/cs2/images/gallery/small/random-user-31.jpg",
     scores:[
       5,
+      4,
+      4,
       1,
-      4,
-      4,
-      5,
+      3,
       1,
       2,
+      2,
+      3,
+      1
+    ]
+  },
+  {
+    name:"Riley",
+    photo:"http://www.simon-li.com/projects/mongkok-wp/wp-content/uploads/2014/07/random-user-201.jpg",
+    scores:[
+      5,
+      3,
+      4,
+      5,
+      5,
+      3,
+      3,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    name:"Ashley",
+    photo:"http://geedmo.com/codecanyon/47admin/app/img/user/08.jpg",
+    scores:[
+      5,
+      3,
+      4,
+      4,
+      2,
+      1,
+      2,
+      4,
+      2,
+      1
+    ]
+  },
+  {
+    name:"Brodie",
+    photo:"https://res.cloudinary.com/dfznckcbh/image/upload/v1432109676/profile/bo3uq6l95y0jyvroipu9.jpg",
+    scores:[
+      1,
+      1,
+      2,
+      4,
+      5,
+      3,
+      2,
+      4,
+      4,
+      5
+    ]
+  },
+  {
+    name:"Rachel",
+    photo:"https://bootstrapmade.com/demo/themes/Mamba/img/team/4.jpg",
+    scores:[
       5,
       4,
-      1
+      4,
+      3,
+      5,
+      5,
+      2,
+      5,
+      1,
+      2
     ]
   }
 ];

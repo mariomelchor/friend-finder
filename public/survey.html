@@ -27,19 +27,19 @@
               <div class="row">
                 <div class="input-field col s6">
                   <i class="material-icons prefix">account_circle</i>
-                  <input id="name" name="name" type="text" required>
+                  <input id="name" name="name" type="text" class="validate" required="" aria-required="true">
                   <label for="name">Name</label>
                 </div><!--/.input -->
                 <div class="input-field col s6">
                   <i class="material-icons prefix">add_a_photo</i>
-                  <input id="photo" name="photo" type="text" required>
+                  <input id="photo" name="photo" type="text" class="validate" required="" aria-required="true">
                   <label for="photo">Photo</label>
                 </div><!--/.input -->
               </div><!--/.row -->
 
               <div class="row">
                 <div class="input-field col s6">
-                  <select id="option_1" name="option_1" required>
+                  <select id="option_1" name="option_1" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -51,7 +51,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_2" name="option_2" required>
+                  <select id="option_2" name="option_2" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -63,7 +63,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_3" name="option_3" required>
+                  <select id="option_3" name="option_3" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -75,7 +75,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_4" name="option_4" required>
+                  <select id="option_4" name="option_4" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -87,7 +87,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_5" name="option_5" required>
+                  <select id="option_5" name="option_5" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -99,7 +99,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_6" name="option_6" required>
+                  <select id="option_6" name="option_6" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -111,7 +111,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_7" name="option_7" required>
+                  <select id="option_7" name="option_7" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -123,7 +123,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_8" name="option_8" required>
+                  <select id="option_8" name="option_8" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -135,7 +135,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_9" name="option_9" required>
+                  <select id="option_9" name="option_9" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -147,7 +147,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_10" name="option_10" required>
+                  <select id="option_10" name="option_10" class="validate" required="" aria-required="true">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -172,8 +172,8 @@
   <div id="modal" class="modal">
     <div class="modal-content">
       <h4>Top Match</h4>
-      <h4 id="best-match-name"></h4>
       <img id="best-match-img" src="" width="400">
+      <h4 id="best-match-name"></h4>
     </div><!-- /.modal-content -->
     <div class="modal-footer">
      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>

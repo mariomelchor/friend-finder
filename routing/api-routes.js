@@ -10,6 +10,8 @@ module.exports = function(app){
   app.post('/api/friends', function (req, res) {
     // Get post request and add to friends array
     var newFriend = req.body;
+    var lowestScore = 100;
+    var match = {};
 
     // Converts all scores to int
     for( var i=0; i < newFriend.scores.length; i++ ) { 
@@ -19,22 +21,24 @@ module.exports = function(app){
     // loop through friends array
     for( var i=0; i < friends.length; i++ ) {
 
-      var sum = 100;
-      var num  = 0;
-      var match = {};
-
       // If array lenghts match
       if ( newFriend.scores.length == friends[i].scores.length ) {
+        console.log(friends[i].name);
+        var friendScore = 0;
 
         // loop through scores and get differences
         for ( var j = 0; j < newFriend.scores.length; j++ ) {
-          num += Math.abs( newFriend.scores[j] - friends[i].scores[j] );
-          // Whos a match
-          if ( num <= sum ) {
-            sum = num;
-            match = friends[i];
-          }
+          friendScore += Math.abs( newFriend.scores[j] - friends[i].scores[j] );
         }
+
+        // Whos a match
+        if ( friendScore < lowestScore ) {
+          match = friends[i];
+          lowestScore = friendScore;
+        }
+
+        console.log('Friend Score:', friendScore);
+        console.log('Lowest Score:', lowestScore + '\n');
       
       }
     }
