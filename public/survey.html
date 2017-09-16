@@ -22,22 +22,24 @@
           <form id="form" action="/api/friends" method="POST"></form>
             <div class="card-content">
               
-              <p>Answer each question below with 1 Being Strongly Disagree and 5 Being Strongly Agree.</p>
+              <p>Answer each question below with <strong>1 Being Strongly Disagree</strong> and <strong>5 Being Strongly Agree</strong>.</p>
 
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="name" name="name" type="text" class="validate" value="">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="name" name="name" type="text" required>
                   <label for="name">Name</label>
                 </div><!--/.input -->
                 <div class="input-field col s6">
-                  <input id="photo" name="photo" type="text" class="validate" value="">
+                  <i class="material-icons prefix">add_a_photo</i>
+                  <input id="photo" name="photo" type="text" required>
                   <label for="photo">Photo</label>
                 </div><!--/.input -->
               </div><!--/.row -->
 
               <div class="row">
                 <div class="input-field col s6">
-                  <select id="option_1" name="option_1">
+                  <select id="option_1" name="option_1" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -45,11 +47,11 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                   </select>
-                  <label>Do you like Sports?</label>
+                  <label>Do You like Sports?</label>
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_2" name="option_2">
+                  <select id="option_2" name="option_2" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -57,11 +59,11 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                   </select>
-                  <label>Do you like long walks on the Beach?</label>
+                  <label>Do You like long walks on the Beach?</label>
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_3" name="option_3">
+                  <select id="option_3" name="option_3" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -73,7 +75,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_4" name="option_4">
+                  <select id="option_4" name="option_4" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -85,7 +87,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_5" name="option_5">
+                  <select id="option_5" name="option_5" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -97,7 +99,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_6" name="option_6">
+                  <select id="option_6" name="option_6" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -109,7 +111,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_7" name="option_7">
+                  <select id="option_7" name="option_7" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -117,11 +119,11 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                   </select>
-                  <label>Do you like the Rain?</label>
+                  <label>Do You like the Rain?</label>
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_8" name="option_8">
+                  <select id="option_8" name="option_8" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -133,7 +135,7 @@
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_9" name="option_9">
+                  <select id="option_9" name="option_9" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -141,11 +143,11 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                   </select>
-                  <label>Materialize Select</label>
+                  <label>Do You Like Traveling?</label>
                 </div><!--/.input -->
 
                 <div class="input-field col s6">
-                  <select id="option_10" name="option_10">
+                  <select id="option_10" name="option_10" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -153,7 +155,7 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                   </select>
-                  <label>Materialize Select</label>
+                  <label>Do you like to Exercise?</label>
                 </div><!--/.input -->
               </div><!--/.row -->
               
@@ -169,15 +171,9 @@
 
   <div id="modal" class="modal">
     <div class="modal-content">
-      <h4>Here is your Top Match</h4>
-      <ul class="collection">
-        <li class="collection-item avatar">
-          <img src="images/yuna.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>Second Line</p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-      </ul>
+      <h4>Top Match</h4>
+      <h4 id="best-match-name"></h4>
+      <img id="best-match-img" src="" width="400">
     </div><!-- /.modal-content -->
     <div class="modal-footer">
      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -210,23 +206,32 @@
         // gets all select field values and adds to array
         $('select').each(function(){
           var number = $(this).val();
-          val.push(parseInt(number));
+          val.push(number);
         });
-
-        // console.log(val);
-        
+      
         var answers = {
           name:  $('#name').val().trim(),
           photo: $('#photo').val().trim(),
-          scores: [ 1, 2, 3]
+          scores: val
         }
-
-        // console.log(answers);
 
         // Post using AJAX
         $.post('/api/friends', answers).done(function(data) {
-          // console.log(data);
+
+          // Gets Besth Match and append to Dom Opens Modal
+          $('#best-match-name').text(data.name);
+          $('#best-match-img').attr('src',data.photo);
           $('#modal').modal('open');
+
+          // Clear out form values
+          $('#name').val('');
+          $('#photo').val('');
+          $('select').each(function(){
+            $(this).val('');
+            $(this).prop('selectedIndex', 0); //Sets the first option as selected
+            $(this).material_select();        //Update material select
+          });
+
         });
 
       });
