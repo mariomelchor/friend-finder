@@ -17,12 +17,13 @@
           <div class="card-image">
             <img src="img/friend-finder-3.jpg">
             <span class="card-title text-uppercase">Friend Finder</span>
+            <a id="btn-random" class="btn-floating btn-large halfway-fab waves-effect waves-light red btn tooltipped" data-position="top" data-delay="50" data-tooltip="Add a Random Person"><i class="material-icons">person_add</i></a>
           </div><!-- /.card-image -->
 
-          <form id="form" action="/api/friends" method="POST"></form>
+          <form id="form" action="/api/friends" method="POST">
             <div class="card-content">
-              
-              <p>Answer each question below with <strong>1 Being Strongly Disagree</strong> and <strong>5 Being Strongly Agree</strong>.</p>
+
+              <p class="flow-text">Answer each question below with <strong>1 Being Strongly Disagree</strong> and <strong>5 Being Strongly Agree</strong>.</p>
 
               <div class="row">
                 <div class="input-field col s6">
@@ -158,22 +159,26 @@
                   <label>Do you like to Exercise?</label>
                 </div><!--/.input -->
               </div><!--/.row -->
-              
+
             </div><!-- /.card-content -->
             <div class="card-action">
               <button id="btn-submit" type="submit" class="waves-effect waves-light btn cyan lighten-1"><i class="material-icons right">arrow_forward</i> Submit Survey</button>
             </div><!-- /.card-action -->
           </form>
-        </div><!-- /.card -->  
-      </div><!-- /.col -->  
+        </div><!-- /.card -->
+      </div><!-- /.col -->
 		</div><!-- /.row -->
   </div><!-- /.container -->
 
-  <div id="modal" class="modal">
+  <div id="modal" class="modal bottom-sheet">
     <div class="modal-content">
       <h4>Top Match</h4>
-      <img id="best-match-img" src="" width="400">
-      <h4 id="best-match-name"></h4>
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img id="best-match-img" src="" width="400" class="circle">
+          <h4 id="best-match-name"></h4>
+        </li>
+      </ul>
     </div><!-- /.modal-content -->
     <div class="modal-footer">
      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -183,7 +188,7 @@
   <footer class="page-footer cyan">
     <div class="footer-copyright">
       <div class="container">
-        &copy; 2017 Friend Finder, All rights reserved.
+        &copy; 2017 Friend Finder, All Rights Reserved.
         <a class="grey-text text-lighten-4 right" href="http://www.mariomelchor.com">Built By: mariomelchor.com</a>
       </div><!-- /.container -->
     </div><!--/.footer-copyright -->
@@ -195,6 +200,24 @@
     $(document).ready(function() {
       $('select').material_select();
       $('.modal').modal();
+
+      // Add random user photo and name
+      $('#btn-random').on("click", function(event) {
+        event.preventDefault();
+        $.ajax({
+          url: 'https://randomuser.me/api/',
+          dataType: 'json',
+          success: function(data) {
+            var photo = data['results'][0].picture.large;
+            var name = data['results'][0].name.first;
+            name = name.charAt(0).toUpperCase() + name.slice(1);
+
+            $('.material-icons').addClass('active');
+            $('#name').val(name).parent().find('label').addClass('active');
+            $('#photo').val(photo).parent().find('label').addClass('active');
+          }
+        });
+      });
 
       // when the search button executed
       $('#btn-submit').on("click", function(event) {
@@ -208,7 +231,7 @@
           var number = $(this).val();
           val.push(number);
         });
-      
+
         var answers = {
           name:  $('#name').val().trim(),
           photo: $('#photo').val().trim(),
