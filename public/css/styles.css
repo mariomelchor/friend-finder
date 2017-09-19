@@ -30,7 +30,7 @@ body {
   color: #000;
 }
 .modal {
-  width: 500px;
+  max-width: 500px;
 }
 .modal .modal-content {
   text-align: center;
