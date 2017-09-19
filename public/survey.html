@@ -17,7 +17,7 @@
           <div class="card-image">
             <img src="img/friend-finder-3.jpg">
             <span class="card-title text-uppercase">Friend Finder</span>
-            <a id="btn-random" class="btn-floating btn-large halfway-fab waves-effect waves-light red btn tooltipped" data-position="top" data-delay="50" data-tooltip="Add a Random Person"><i class="material-icons">person_add</i></a>
+            <a id="btn-random" class="btn-floating btn-large halfway-fab waves-effect waves-light red btn tooltipped" data-position="top" data-delay="50" data-tooltip="Random Person Generator"><i class="material-icons">person_add</i></a>
           </div><!-- /.card-image -->
 
           <form id="form" action="/api/friends" method="POST">
@@ -214,6 +214,12 @@
             var name = data['results'][0].name.first;
             name = name.charAt(0).toUpperCase() + name.slice(1);
 
+            // gets all select field values and adds to array
+            $('select').each(function(){
+              var randomNumber = 1 + Math.floor(Math.random() * 5);
+              $(this).val(randomNumber);
+            });
+
             $('.material-icons').addClass('active');
             $('#name').val(name).parent().find('label').addClass('active');
             $('#photo').val(photo).parent().find('label').addClass('active');
@@ -224,7 +230,7 @@
       // when the search button executed
       $('#btn-submit').on('click', function(event) {
         // Validate if fields are selected
-        if( $('#name').val() != "" && $('#photo').val() != "" && $('option[disabled]:selected').length == 0 )  {
+        if( $('#name').val() != "" && $('#photo').val() != "" && $('#option_1').val() && $('#option_2').val() && $('#option_3').val() && $('#option_4').val() && $('#option_5').val() && $('#option_6').val() && $('#option_7').val() && $('#option_8').val() && $('#option_9').val() && $('#option_10').val() ) {
           // far for select fields
           var val = [];
 
@@ -259,6 +265,11 @@
         
         }
 
+      });
+
+      // Prevent form frm submitting
+      $('#form').submit(function(event){
+        event.preventDefault();
       });
 
     });
